@@ -1,4 +1,4 @@
-import logo from "../../../public/logo/logo-no-background.png"
+import logo from "../../../public/logo/logo-side.png"
 import Image from 'next/image'
 
 
@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <header>
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <a className="block text-teal-600 dark:text-teal-300" href="/">
+        <a className="block" href="/">
           <Image src={logo} className="w-28" />
         </a>
         <div className="flex flex-1 items-center justify-end md:justify-between">
@@ -14,7 +14,7 @@ export default function Navbar() {
             <ul className="flex items-center gap-6 text-sm">
               <li>
                 <a
-                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                  className="text-primary transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   About
@@ -22,44 +22,13 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                  className="text-primary transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
                   href="/"
                 >
                   Careers
                 </a>
               </li>
-              <li>
-                <a
-                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                  href="/"
-                >
-                  History
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                  href="/"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                  href="/"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                  href="/"
-                >
-                  Blog
-                </a>
-              </li>
+
             </ul>
           </nav>
           <div className="flex items-center gap-4">
