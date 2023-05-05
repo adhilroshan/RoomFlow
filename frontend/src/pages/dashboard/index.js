@@ -37,12 +37,11 @@ export default function Dashboard() {
         })}
 
         <div className="flex  justify-center h-screen">
-          <a
-            href="/"
+          <button
             className="bg-slate-500 p-1 rounded-lg text-white w-24 h-10 hover:bg-slate-700 absolute bottom-5"
           >
             Sign Out
-          </a>
+          </button>
         </div>
       </div>
       <div className="ml-52 h-screen flex-1 px-96 pt-10 space-y-10">

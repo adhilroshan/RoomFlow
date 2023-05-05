@@ -30,11 +30,11 @@ export default function SignUp() {
     <section className=" bg-background">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <div className="w-full  rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-primary dark:border-gray-700">
-          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <div className="p-6 space-y-4 md:space-y-6 sm:p-8 bg-white">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Create and account
             </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
+            <form className="space-y-4 md:space-y-6 bg-white"  action="#">
               <div>
                 <label
                   htmlFor="text"
