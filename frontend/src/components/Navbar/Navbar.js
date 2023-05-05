@@ -1,11 +1,11 @@
-import logo from "../../../public/logo/logo-side.png"
-import Image from 'next/image'
+import logo from "../../../public/logo/logo-side.png";
+import Image from 'next/image';
 
 
 export default function Navbar() {
   return (
-    <header>
-      <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+    <header className="">
+      <div className="mx-auto text-lg flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <a className="block" href="/">
           <Image src={logo} className="w-28" />
         </a>
@@ -34,13 +34,13 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
               <a
-                className="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700 dark:hover:bg-teal-500"
+                className="block rounded-md bg-teal-600 px-5 py-2.5 font-medium text-white transition hover:bg-teal-700 dark:hover:bg-teal-500"
                 href="/"
               >
                 Login
               </a>
               <a
-                className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75 sm:block"
+                className="hidden rounded-md bg-gray-100 px-5 py-2.5 font-medium text-teal-600 transition hover:text-teal-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75 sm:block"
                 href="/"
               >
                 Register

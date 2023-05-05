@@ -1,18 +1,18 @@
-import Image from 'next/image';
 import Navbar from "@/components/Navbar/Navbar";
-import logo from "../../public/logo/logo-side.png";
+import Image from 'next/image'
+import logo from '../../public/logo/logo.svg'
 
 
 export default function Home() {
   return <main>
-    <div className="bg-background w-screen h-screen font-robo">
+    <div>
       <Navbar />
-      <div className="flex items-center justify-evenly">
+      <div className="lg:flex items-center justify-evenly lg:p-20 p-10">
         <div>
-          <h1>Room Flow</h1>
+          <h1 className='font-bold text-2xl lg:text-7xl text-primary lg:leading-snug'>RoomFlow: Blockchain-based platform for sustainable and affordable rentals.</h1>
         </div>
         <div>
-          <Image src={logo} />
+          <Image width={800} height={800} src={logo} />
         </div>
       </div>
     </div>
