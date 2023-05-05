@@ -1,5 +1,20 @@
+import { useEffect, useState } from "react";
+
+
 export default function DashboardView() {
-  return (
+
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:1337/api/spaces")
+      .then((response) => response.json())
+      .then((data) => setData(data.data))
+      .catch((error) => console.error("Error fetching data:", error));
+
+  },[])
+  
+  console.log(data);
+  return data.map((item) => (
     <a
       href="#"
       className="block rounded-lg p-4 shadow-sm shadow-indigo-100 bg-primary border-gray-900"
@@ -13,12 +28,12 @@ export default function DashboardView() {
         <dl>
           <div>
             <dt className="sr-only">Price</dt>
-            <dd className="text-sm text-gray-500">$240,000</dd>
+            <dd className="text-sm text-gray-500">{item.attributes.price}</dd>
           </div>
           <div>
             <dt className="sr-only">Address</dt>
             <dd className="font-medium text-white">
-              123 Wallaby Avenue, Park Road
+              {item.attributes.address}
             </dd>
           </div>
         </dl>
@@ -39,11 +54,11 @@ export default function DashboardView() {
               />
             </svg>
             <div className="mt-1.5 sm:mt-0">
-              <p className="text-white">Parking</p>
-              <p className="font-medium">2 spaces</p>
+              <p className="text-white">{item.attributes.type}</p>
+              {/* <p className="font-medium">2 spaces</p> */}
             </div>
           </div>
-          <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+          {/* <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
             <svg
               className="h-4 w-4 text-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -62,9 +77,9 @@ export default function DashboardView() {
               <p className="text-white">Bathroom</p>
               <p className="font-medium">2 rooms</p>
             </div>
-          </div>
+          </div> */}
           <div className="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
-            <svg
+            {/* <svg
               className="h-4 w-4 text-white"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -77,14 +92,14 @@ export default function DashboardView() {
                 strokeWidth={2}
                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
               />
-            </svg>
-            <div className="mt-1.5 sm:mt-0">
+            </svg> */}
+            {/* <div className="mt-1.5 sm:mt-0">
               <p className="text-white">Bedroom</p>
               <p className="font-medium">4 rooms</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
     </a>
-  );
+  ));
 }
