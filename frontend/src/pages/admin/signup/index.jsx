@@ -1,10 +1,10 @@
 import { useState } from 'react';
 export default function SignUp() {
 
-  const [name,setName] = useState(' ');
-  const [email,setEmail] = useState(' ');
-  const [pass,setPass] = useState(' ');
-  const [phone,setPhone] = useState(' ');
+  const [name,setName] = useState('');
+  const [email,setEmail] = useState('');
+  const [pass,setPass] = useState('');
+  const [phone,setPhone] = useState('');
  
   return (
 		<section className=" bg-background">

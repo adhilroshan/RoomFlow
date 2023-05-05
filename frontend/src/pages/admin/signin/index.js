@@ -1,11 +1,13 @@
 
 import React from 'react';
+import { useState } from 'react';
 
 
 
 export default function App() {
-   const [email, setEmail] = useState(" ");
-		const [pass, setPass] = useState(" ");
+   const [email, setEmail] = useState("");
+		const [pass, setPass] = useState("");
+ 
   
   return (
 		<section className="bg-gray-50 dark:bg-gray-900">
