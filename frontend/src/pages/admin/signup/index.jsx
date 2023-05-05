@@ -6,6 +6,11 @@ export default function SignUp() {
   const [pass,setPass] = useState('');
   const [phone,setPhone] = useState('');
  
+
+  fetch('http://localhost:8000/api/', {
+	  
+  })
+  
   return (
 		<section className=" bg-background">
 			<div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -85,7 +90,7 @@ export default function SignUp() {
                   value={pass}
 								/>
 							</div>
-							<div>
+							{/* <div>
 								<label
 									htmlFor="confirm-password"
 									className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -101,7 +106,7 @@ export default function SignUp() {
 									required=""
                   
 								/>
-							</div>
+							</div> */}
 
 							<button
 								type="submit"

@@ -1,46 +1,26 @@
-import logo from "../../../public/logo/logo-side.png";
+import logo from "../../../public/logo/logo.svg";
 import Image from 'next/image';
 
 
 export default function Navbar() {
   return (
     <header className="">
-      <div className="mx-auto text-lg flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <a className="block" href="/">
-          <Image src={logo} className="w-28" />
+      <div className="mx-auto text-lg flex h-[10vh] max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+        <a className="block font-bold  text-primary" href="/">
+          <Image src={logo} className="w-20 pt-5" />
         </a>
         <div className="flex flex-1 items-center justify-end md:justify-between">
-          <nav aria-label="Site Nav" className="hidden md:block">
-            <ul className="flex items-center gap-6 text-sm">
-              <li>
-                <a
-                  className="text-primary transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                  href="/"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-primary transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                  href="/"
-                >
-                  Careers
-                </a>
-              </li>
-
-            </ul>
-          </nav>
+          <nav aria-label="Site Nav" className="hidden md:block"></nav>
           <div className="flex items-center gap-4">
-            <div className="sm:flex sm:gap-4">
+            <div className="sm:flex sm:gap-4 pt-5">
               <a
-                className="block rounded-md bg-teal-600 px-5 py-2.5 font-medium text-white transition hover:bg-teal-700 dark:hover:bg-teal-500"
+                className="block rounded-md bg-primary px-5 py-2.5 font-medium text-white transition hover:bg-transparent hover:border border-primary hover:text-primary"
                 href="./admin/signin"
               >
                 Login
-              </a> 
+              </a>
               <a
-                className="hidden rounded-md bg-gray-100 px-5 py-2.5 font-medium text-teal-600 transition hover:text-teal-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75 sm:block"
+                className="hidden rounded-md  px-5 py-2.5 font-medium text-primary  bg-transparent hover:bg-primary hover:text-white border border-primary transition   sm:block"
                 href="./admin/signup"
               >
                 Register
