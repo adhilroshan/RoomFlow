@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spaces",
+  "info": {
+    "singularName": "space",
+    "pluralName": "spaces",
+    "displayName": "space",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "ownerId": {
+      "type": "integer",
+      "required": true
+    },
+    "latitude": {
+      "type": "float",
+      "required": true
+    },
+    "longitude": {
+      "type": "float",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "float",
+      "required": true
+    },
+    "price": {
+      "type": "float",
+      "required": true
+    },
+    "amenities": {
+      "type": "string",
+      "required": true
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}
